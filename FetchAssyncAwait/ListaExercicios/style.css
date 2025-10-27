@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(31, 1, 10);
+    color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+}
+button{
+    background-color: rgb(122, 2, 42);
+    color: antiquewhite;
+    font-size: larger;
+    border-radius: 8px;
+    border-color: antiquewhite;
+    width: 200px;
+    height: 40px;
+}
+button:hover{
+    background-color: rgb(238, 59, 118);
+    cursor: pointer;
+}
+
+.botao-invisivel {
+    background-color: rgba(250, 235, 215, 0.219);
+    color: antiquewhite;
+    font-size: medium;
+    border-radius: 8px;
+    border: none;
+    max-width: 180px;
+    max-height: 35px;
+}
+.botao-invisivel:hover{
+    background-color:rgba(238, 59, 119, 0.308);
+    color: rgb(238, 59, 118);
+}
+
+.hidden{
+    display: none;
+}

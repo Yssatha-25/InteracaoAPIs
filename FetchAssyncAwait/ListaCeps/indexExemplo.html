@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch x async/await</title>
+</head>
+
+<body>
+    <script>
+        // Buscar dados do CEP usando fetch().then().then().catch()
+
+
+
+        // Fetch/then
+
+        // fetch(url).then(resposta => resposta.json()).then(dados => {console.log(dados.bairro)})
+        // fetch(url).then(resposta => resposta.json()).then(dados => {console.log(dados.logradouro)})
+        // fetch(url).then(resposta => resposta.json()).then(dados => {console.log(dados.cep)})
+
+
+
+        // assync/await = mesma coisa que o fetch só que mais 'moderno'
+
+        // async function BuscarCEP() {
+        //     try {
+        //         const resposta = await fetch(url)
+        //         const dados = await resposta.json()
+
+        //         console.log(dados.cep)
+        //         console.log(dados.logradouro)
+
+        //     } catch(erro){
+        //         console.log(erro.message)
+        //     }
+        // }
+
+        // BuscarCEP()
+
+        // function DarAlert(){
+        //     alert("Carregou os dados !!")
+        // }
+
+        const url = "https://viacep.com.br/ws/88161789/json/"
+
+        // fetch - then - then - catch
+        // fetch (url)
+        // .then (resposta => resposta.json()) // pega a resposta do servidor e converte ela para objeto
+        // .then (dados => console.log(dados)) // pega os dados e usa
+        // .catch (erro => console.log(erro.message)) // pega um erro se houver
+
+
+        // async / await
+        async function BuscarCEP() {
+            try {
+                const resposta = await fetch(url)
+                const dados = await resposta.json()
+                console.log(`
+            Cep: ${dados.cep}
+            Rua: ${dados.logradouro}
+            Cidade: ${dados.localidade}
+            Estado: ${dados.estado}
+            `)
+            } catch (erro) {
+                console.log(erro.message)
+            }
+        }
+
+        BuscarCEP()
+    </script>
+</body>
+
+</html>

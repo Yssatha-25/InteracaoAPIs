@@ -1,0 +1,27 @@
+.hidden{
+    display: none;
+}
+
+body{
+    background-color: rgb(54, 1, 104);
+    color: antiquewhite;
+    margin: 2rem;
+}
+
+*{
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    background-color: rgb(146, 3, 63);
+    color: antiquewhite;
+    padding: 0.5; /*espaçamento entre a borda e o texto*/
+    border-radius: 10px;
+    border: 2px outset rgb(78, 3, 34);
+    font-weight: 600;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(252, 94, 191);
+}
